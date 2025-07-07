@@ -11,22 +11,30 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container flex header-inner">
+<header class="header">
+  <div class="container header-inner">
+    <!-- BRAND block → logo + name together -->
+    <a href="#home" class="brand">
       <img src="images/logo.jpg" alt="Sujatha’s Biryani & Curries Logo" class="logo">
-       <span class="logo-text" style="color:#f19408;font-size:1.4rem;">Sujata's Restaurent🍽️</span>
-      <nav id="main-nav">
-        <ul class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
-    </div>
-  </header>
+      <span class="logo-text">Sujatha’s Restaurent 🍽️</span>
+    </a>
+
+    <!-- Main Navigation -->
+    <nav id="main-nav">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Burger button for mobile -->
+    <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section id="home" class="hero">
@@ -42,15 +50,44 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container about-inner">
-      <h2>About Us</h2>
-      <p>Sujatha’s Biryani &amp; Curries brings the soulful flavours of coastal Andhra
-         and the aromatic spices of Hyderabad right to Manikonda. Dine‑in for a
-         cosy family meal or grab a quick takeaway on your way home.</p>
+  <!-- Special Offer Banner -->
+  <section class="special-offer">
+    <div class="container">
+      <p>🎉 <strong>10&nbsp;% OFF every Sunday</strong> on all takeaway orders! 🎉</p>
     </div>
   </section>
+
+   <!-- Reviews Section -->
+  <section id="reviews" class="reviews">
+    <div class="container reviews-inner">
+      <h2>What Our Customers Say</h2>
+      <div class="review"><p>"Best biryani I’ve had in Hyderabad... Full of flavour and spice." <strong>– Suresh Ch.</strong></p></div>
+      <div class="review"><p>"Amazing curries and warm service. Our family loves it!"<strong> – Priya M.</strong></p></div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+<section id="about" class="about">
+  <div class="container about-inner">
+    <h2>About Sujatha’s Biryani & Curries</h2>
+    <p>
+      At Sujatha’s Biryani & Curries, we bring you the true essence of Andhra and Telangana cuisine.
+      Located in the heart of Manikonda, Hyderabad, our kitchen serves up traditional recipes that
+      have been passed down through generations—with a modern touch of love and care.
+    </p>
+    <p>
+      From spicy Godavari meals and rich curries to perfectly layered biryanis, every dish is
+      crafted using premium ingredients, fresh ground spices, and authentic cooking techniques.
+    </p>
+    <p>
+      Whether you’re dining in with family or grabbing a quick takeaway, we promise quality,
+      hygiene, and unbeatable taste—every single time.
+    </p>
+    <p><strong>Come taste the difference!</strong></p>
+  </div>
+</section>
+
 
   <!-- Menu -->
   <section id="menu" class="menu">
@@ -114,14 +151,36 @@
     </div>
   </section>
 
+  <!-- Order Form -->
+<section id="order" class="order-form">
+  <div class="container order-form-inner">
+    <h2>Place a Quick Order</h2>
+
+    <form>
+      <!-- customer details -->
+      <input type="text"  name="customer" placeholder="Your Name"          required><br>
+      <input type="tel"   name="mobile"   placeholder="Mobile Number"      required><br>
+
+      <!-- two single‑line order fields -->
+      <input type="text"  name="item1" placeholder="Item 1 (e.g. Chicken Biryani)" required><br>
+      <input type="text"  name="item2" placeholder="Item 2 (e.g. Paneer Curry)"   required><br>
+
+      <button type="submit" class="btn primary">Send Order</button>
+    </form>
+  </div>
+</section>
+
+
   <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container contact-inner">
       <h2>Contact &amp; Location</h2>
       <p class="phone"><i class="fa fa-phone"></i> <a href="tel:9849125384">98491&nbsp;25384</a></p>
-      <p class="address"><i class="fa fa-map-marker-alt"></i> Manikonda, Hyderabad</p>
+      <p class="address"><i class="fa fa-map-marker-alt"></i>Address: Plot No : 93 & 94, 1st Floor Opp Vijetha Super Market, Puppalaguda, Manikonda, Telangana 500089, India</p>
+      <p class="hours"><i class="fa fa-clock"></i> Open Daily: 11:00 AM – 11:00 PM</p>
       <div class="map-wrapper">
-        <iframe src="https://maps.google.com/maps?q=Manikonda%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      <div class="map-wrapper">
+       <iframe src="https://maps.google.com/maps?q=Manikonda%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -139,6 +198,12 @@
         <a href="/terms-and-conditions.html">Terms & Conditions</a>| 
         <a href="/cookie-policy.html">Cookie Policy</a>|
         <a href="/disclaimer.html">Disclaimer</a>
+      <p class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </p>
+    </div>
     </div>
   </footer>
 

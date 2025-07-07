@@ -6,3 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     navList.classList.toggle('open');
   });
 });
+
+ window.addEventListener('scroll', () => {
+      const button = document.querySelector('.floating-whatsapp');
+      if (button && !button.classList.contains('blink')) {
+        button.classList.add('blink');
+      }
+    });

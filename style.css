@@ -56,11 +56,14 @@ section h2 { text-align: center; margin-bottom: 25px; font-size: 1.8rem; }
   padding: 10px 20px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bold; 
+
+
+  
   font-size: 1rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 15px rgba(42, 245, 59, 0.6);
+  box-shadow: 0 0 15px rgba(13, 236, 31, 0.6);
   animation: blink-glow 0.5s infinite;
   z-index: 1000;
 }
@@ -73,7 +76,7 @@ section h2 { text-align: center; margin-bottom: 25px; font-size: 1.8rem; }
 
 @keyframes blink-glow {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(32, 218, 41, 0.6);
+    box-shadow: 0 0 10px rgba(48, 243, 58, 0.6);
   }
   50% {
     box-shadow: 0 0 20px rgba(37, 211, 102, 1);
@@ -83,9 +86,9 @@ section h2 { text-align: center; margin-bottom: 25px; font-size: 1.8rem; }
 @media (max-width: 768px) {
   .whatsapp-float {
     border-radius: 50%;
-    padding: 15px;
+    padding: 1px;
     width: 60px;
-    height: 60px;
+    height: 50px;
     justify-content: center;
   }
 
@@ -99,3 +102,84 @@ section h2 { text-align: center; margin-bottom: 25px; font-size: 1.8rem; }
   .nav-list.open { transform: translateX(0); }
   .nav-toggle { display: block; color: #333; }
 }
+
+.floating-whatsapp:hover { transform: scale(1.1); }
+    .floating-whatsapp img { width: 30px; height: 30px; }
+    @keyframes pulseWhatsApp {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
+      70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); transform: scale(1.05); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
+    }
+    .floating-whatsapp.blink { animation: pulseWhatsApp 1.5s infinite; }
+    .blink-button {
+  animation: pulseWhatsApp 1s infinite;
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+.blink-button i {
+  margin-right: 10px;
+}
+
+/* ——— Global text‑centre patch ——— */
+.about-inner,
+.menu-inner,
+.gallery-inner,
+.reviews-inner,
+.order-form-inner,
+.contact-inner,
+.special-offer,
+.hero-text      { text-align: center; }
+
+/* Keep bullet lists readable inside Menu */
+.menu-category ul {
+  display: inline-block;      /* centres the list block itself */
+  text-align: left;           /* but items stay left‑aligned */
+}
+
+/* About Section */
+.about              { background:#fff; padding:60px 20px; }
+.about h2           { font-size:2rem; color:#d62323; margin-bottom:20px; }
+.about p            { font-size:1.1rem; line-height:1.6; margin:10px 0; color:#333; }
+.about-inner        { max-width:800px; margin:0 auto; text-align:center; }
+
+/* --- HEADER LAYOUT --- */
+.header-inner {
+  display: flex;                 /* make children line up in a row */
+  align-items: center;           /* vertical centring */
+  justify-content: space-between;
+}
+
+/* --- BRAND (logo + name) --- */
+.brand {
+  display: flex;                 /* logo + text side‑by‑side */
+  align-items: center;
+  gap: 8px;                      /* space between logo & text */
+  text-decoration: none;         /* whole thing clickable */
+}
+
+.logo {
+  height: 44px;                  /* adjust to taste */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f19408;                /* your orange colour */
+  white-space: nowrap;           /* stops line‑breaks */
+}
+
+/* Optional: keep nav menu on one line */
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+
