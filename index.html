@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sujatha’s Biryani &amp; Curries | Manikonda, Hyderabad</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -152,23 +153,21 @@
   </section>
 
   <!-- Order Form -->
-<section id="order" class="order-form">
-  <div class="container order-form-inner">
-    <h2>Place a Quick Order</h2>
-
-    <form>
-      <!-- customer details -->
-      <input type="text"  name="customer" placeholder="Your Name"          required><br>
-      <input type="tel"   name="mobile"   placeholder="Mobile Number"      required><br>
-
-      <!-- two single‑line order fields -->
-      <input type="text"  name="item1" placeholder="Item 1 (e.g. Chicken Biryani)" required><br>
-      <input type="text"  name="item2" placeholder="Item 2 (e.g. Paneer Curry)"   required><br>
-
-      <button type="submit" class="btn primary">Send Order</button>
-    </form>
-  </div>
-</section>
+ <section id="order" class="order-form">
+    <div class="container order-form-inner">
+      <div class="order-card">
+        <h2>Place a Quick Order</h2>
+        <form id="quick‑order">
+          <input type="text"  name="customer" placeholder="Your Name" required>
+          <input type="tel"   name="mobile"   placeholder="Mobile Number" required>
+          <input type="text"  name="item1"    placeholder="Item 1 (e.g. Chicken Biryani)" required>
+          <input type="text"  name="item2"    placeholder="Item 2 (e.g. Paneer Curry)"   required>
+          <p id="form-status" class="form-status"></p>
+          <button type="submit" class="btn primary">Send Order</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
 
   <!-- Contact -->
@@ -213,5 +212,6 @@
     <img src="images/whatsapp.png" alt="Join WhatsApp" class="whatsapp-icon">
   </a>
   <script defer src="script.js"></script>
+ <div id="toast" class="toast"></div>
 </body>
 </html>
