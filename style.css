@@ -392,3 +392,35 @@ input.full { grid-column:1 / -1; }
   border-radius: 8px;
   border: 1px solid #b5e3b5;
 }
+/* ——— Legal / Policy page styling ——— */
+.legal-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 32px 26px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  line-height: 1.8;
+}
+
+.legal-container h2 {
+  color: var(--brand-red);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.legal-container h3 {
+  color: #d14545;
+  margin-top: 28px;
+  font-size: 1.3rem;
+}
+
+.legal-container ul {
+  margin: 10px 0 10px 20px;
+}
+
+.legal-container p, .legal-container li {
+  font-size: 1.05rem;
+  color: var(--text);
+}
